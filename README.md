@@ -25,9 +25,9 @@ DH52201634_NguyenVanTrongTri
 <body>
     <div class="container">
         <h1>Thông tin cá nhân</h1>
-        <p><strong>Họ và tên:</strong> Tân</p>
-        <p><strong>Nghề nghiệp:</strong> Học sinh</p>
-        <p><strong>Số điện thoại:</strong> 0335523095</p>
+        <p><strong>Họ và tên:</strong> Nguyen Van Trong Tri</p>
+        <p><strong>Mssv:</strong> DH52201634</p>
+        <p><strong>Lop:</strong> D22_TH06</p>
     </div>
 </body>
 </html>
