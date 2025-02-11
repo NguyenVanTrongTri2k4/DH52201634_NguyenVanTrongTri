@@ -25,7 +25,7 @@
         <h1>Thông tin cá nhân</h1>
         <p><strong>Họ và tên:</strong> Nguyen Van Trong Tri</p>
         <p><strong>Mssv:</strong> DH52201634</p>
-        <p><strong>Lop:</strong> D22_TH06</p>
+        <p><strong>Lớp:</strong> D22_TH06</p>
     </div>
 </body>
 </html>
