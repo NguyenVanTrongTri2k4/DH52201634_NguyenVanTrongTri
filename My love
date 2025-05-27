@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      overflow: hidden;
+      background: radial-gradient(#2c0f0f, #000);
+      font-family: 'Times New Roman', serif;
+      position: relative;
+    }
+    .text {
+      position: absolute;
+      color: white;
+      font-size: 20px;
+      opacity: 0.8;
+      white-space: nowrap;
+      animation: fall linear infinite;
+    }
+    @keyframes fall {
+      0% {
+        transform: translateY(-100px);
+        opacity: 0;
+      }
+      20% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(110vh);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <script>
+    const texts = [
+      "Happy Birthday", "18/04/2004", "I love you", "Wish you all the best",
+      "Ngày mà thế giới ngoài mặt quá yên"
+    ];
+
+    function createText() {
+      const text = document.createElement("div");
+      text.classList.add("text");
+      text.textContent = texts[Math.floor(Math.random() * texts.length)];
+      text.style.left = Math.random() * window.innerWidth + "px";
+      text.style.animationDuration = (3 + Math.random() * 5) + "s";
+      text.style.fontSize = (16 + Math.random() * 10) + "px";
+      document.body.appendChild(text);
+      setTimeout(() => text.remove(), 8000);
+    }
+
+    setInterval(createText, 300);
+
+    let startX = null;
+    document.addEventListener("touchstart", (e) => {
+      startX = e.touches[0].clientX;
+    });
+
+    document.addEventListener("touchend", (e) => {
+      if (startX === null) return;
+      let endX = e.changedTouches[0].clientX;
+      let diff = endX - startX;
+      if (Math.abs(diff) > 50) {
+        if (diff > 0) alert("Vuốt sang phải");
+        else alert("Vuốt sang trái");
+      }
+      startX = null;
+    });
+  </script>
+</body>
+</html>
